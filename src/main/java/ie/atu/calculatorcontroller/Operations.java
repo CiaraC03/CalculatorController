@@ -3,60 +3,40 @@ package ie.atu.calculatorcontroller;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.Scanner;
-
-@Getter
-@Setter
-
 public class Operations {
 
-    int num1, num2, total;
-    String operation;
+    private int total;
+    private String operation;
 
-    public Operations(int total) {
+    public Operations(int total, String operation) {
         this.total = total;
-    }
-
-    // constructor
-    public Operations(int num1, int num2, String operation)
-    {
-        this.num1 = num1;
-        this.num2 = num2;
         this.operation = operation;
     }
 
+    public Operations(String operationChose, int sum) {
+    }
 
-
-    //addition function
-    public int add()
-    {
-        //how to return two different variables
-        //operation = add;
-        total = num1+num2;
-
+    public int getTotal() {
         return total;
     }
 
-    //division function
-    public int divide()
-    {
-        total = num1/num2;
-        return total;
+    public void setTotal(int total) {
+        this.total = total;
     }
 
-    //subtract function
-    public int subtract()
-    {
-        total = num1 - num2;
-        return total;
+    public String getOperation() {
+        return operation;
     }
 
-    //multiply function
-    public int multiply()
-    {
-        total = num1 * num2;
-        return total;
+    public void setOperation(String operation) {
+        this.operation = operation;
     }
+
+    // constructor
+
+
+
+
 
 
 

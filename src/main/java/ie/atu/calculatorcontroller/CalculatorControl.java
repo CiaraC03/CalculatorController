@@ -12,28 +12,35 @@ public class CalculatorControl {
 
     //create calculate to enter two numbers and operation to get request from website
     @GetMapping("/calculate")
-    public Object calculate(@RequestParam int num1, @RequestParam int num2, @RequestParam String operation)
+    public Operations calculate(@RequestParam int num1, @RequestParam int num2, @RequestParam String operation)
     {
-        Operations operations = new Operations(num1, num2, operation);
+       // Operations operations = new Operations(num1, num2, operation);
+
+        String operationChose = "";
+        int sum = 0;
 
         switch(operation)
         {
             case "add":
-                operations.add();
+                sum = num1 + num2;
+                operationChose = "add";
                 break;
             case "divide":
-                operations.divide();
+                sum = num1/num2;
+                operationChose = "divide";
                 break;
             case "subtract":
-                operations.subtract();
+                sum = num1-num2;
+                operationChose = "subtract";
                 break;
             case "multiply":
-                operations.multiply();
+                sum = num1*num2;
+                operationChose = "multiply";
                 break;
 
         }
-        return  operation + ", your total is ";
+        return  new Operations(operationChose,sum);
     }
 
-    //return new Operations();
+    //return new Operations(operation, total);
 }
