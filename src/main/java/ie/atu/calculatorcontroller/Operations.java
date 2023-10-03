@@ -13,9 +13,8 @@ public class Operations {
         this.operation = operation;
     }
 
-    //public Operations(String operationChose, int sum) {
-    //}
 
+//used getters and setters for the total value and operation
     public int getTotal() {
         return total;
     }
@@ -32,7 +31,7 @@ public class Operations {
         this.operation = operation;
     }
 
-    // constructor
+
 
 
 
