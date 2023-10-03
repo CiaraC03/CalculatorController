@@ -13,8 +13,8 @@ public class Operations {
         this.operation = operation;
     }
 
-    public Operations(String operationChose, int sum) {
-    }
+    //public Operations(String operationChose, int sum) {
+    //}
 
     public int getTotal() {
         return total;

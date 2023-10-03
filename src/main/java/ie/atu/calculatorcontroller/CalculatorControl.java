@@ -37,9 +37,8 @@ public class CalculatorControl {
                 sum = num1*num2;
                 operationChose = "multiply";
                 break;
-
         }
-        return  new Operations(operationChose,sum);
+        return  new Operations(sum, operationChose);
     }
 
     //return new Operations(operation, total);
