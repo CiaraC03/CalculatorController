@@ -14,8 +14,8 @@ public class CalculatorControl {
     @GetMapping("/calculate")
     public Operations calculate(@RequestParam int num1, @RequestParam int num2, @RequestParam String operation)
     {
-       // Operations operations = new Operations(num1, num2, operation);
 
+        //used empty string to store users choice
         String operationChose = "";
         int sum = 0;
 
@@ -38,8 +38,9 @@ public class CalculatorControl {
                 operationChose = "multiply";
                 break;
         }
+        //the sum of the calculation and operation choice will be returned
         return  new Operations(sum, operationChose);
     }
 
-    //return new Operations(operation, total);
+
 }
