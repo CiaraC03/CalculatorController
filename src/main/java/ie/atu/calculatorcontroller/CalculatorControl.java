@@ -14,6 +14,26 @@ public class CalculatorControl {
     @GetMapping("/calculate")
     public Object calculate(@RequestParam int num1, @RequestParam int num2, @RequestParam String operation)
     {
-        return "Operation" + operation + ", your total is ";
+        Operations operations = new Operations(num1, num2, operation);
+
+        switch(operation)
+        {
+            case "add":
+                operations.add();
+                break;
+            case "divide":
+                operations.divide();
+                break;
+            case "subtract":
+                operations.subtract();
+                break;
+            case "multiply":
+                operations.multiply();
+                break;
+
+        }
+        return  operation + ", your total is ";
     }
+
+    //return new Operations();
 }
